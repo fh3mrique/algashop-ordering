@@ -3,18 +3,26 @@ package com.algaworks.algashop.ordering;
 import com.algaworks.algashop.ordering.domain.entity.Customer;
 import org.junit.jupiter.api.Test;
 
-public class CustomerTest {
-    @Test
-    public void testingCustomer(){
-        // Construtor vazio permite nascer um objeto em estado inválido:
-        // não existe cliente no domínio sem nome e sem documento
-        Customer customer = new Customer();
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.UUID;
 
-        customer.setId(null);
-        customer.setFullName("Filipe lima");
-        // Setter público aceita qualquer String: nenhuma regra de negócio
-        // é aplicada e o objeto fica sempre mutável e sem invariantes
-        customer.setDocument("11332");
+public class CustomerTest {
+
+    @Test
+    public void testingCustomer() {
+        Customer customer = new Customer(
+                UUID.randomUUID(),
+                "Jhon Doe",
+                LocalDate.of(1991, 7,5),
+                "jhon.doe@email.com",
+                "478-256-2504",
+                "255-08-0578",
+                true,
+                OffsetDateTime.now()
+        );
+
+        customer.addLoyaltyPoints(10);
     }
 
 }
