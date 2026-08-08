@@ -121,7 +121,7 @@ public class Customer {
     }
 
     private void setId(UUID id) {
-        Objects.requireNonNull(id)
+        Objects.requireNonNull(id);
         this.id = id;
     }
 
@@ -129,7 +129,7 @@ public class Customer {
         Objects.requireNonNull(fullName);
 
         if (fullName.isBlank()){
-            throw new IllegalArgumentException()
+            throw new IllegalArgumentException();
         }
         this.fullName = fullName;
     }
@@ -151,33 +151,33 @@ public class Customer {
             throw new IllegalArgumentException();
         }
         if (!EmailValidator.getInstance().isValid(email)){
-            throw new IllegalArgumentException()
+            throw new IllegalArgumentException();
         }
         this.email = email;
     }
 
     private void setPhone(String phone) {
-        Objects.requireNonNull(phone)
+        Objects.requireNonNull(phone);
         this.phone = phone;
     }
 
     private void setDocument(String document) {
-        Objects.requireNonNull(document)
+        Objects.requireNonNull(document);
         this.document = document;
     }
 
     private void setPromotionNotificationAllowed(Boolean promotionNotificationAllowed) {
-        Objects.requireNonNull(promotionNotificationAllowed)
+        Objects.requireNonNull(promotionNotificationAllowed);
         this.promotionNotificationAllowed = promotionNotificationAllowed;
     }
 
     private void setArchived(Boolean archived) {
-        Objects.requireNonNull(archived)
+        Objects.requireNonNull(archived);
         this.archived = archived;
     }
 
     private void setRegisteredAt(OffsetDateTime registeredAt) {
-        Objects.requireNonNull(registeredAt)
+        Objects.requireNonNull(registeredAt);
         this.registeredAt = registeredAt;
     }
 
@@ -186,7 +186,7 @@ public class Customer {
     }
 
     private void setLoyaltyPoints(Integer loyaltyPoints) {
-        Objects.requireNonNull(loyaltyPoints)
+        Objects.requireNonNull(loyaltyPoints);
         this.loyaltyPoints = loyaltyPoints;
     }
 
